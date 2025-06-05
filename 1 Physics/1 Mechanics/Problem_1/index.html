@@ -48,6 +48,60 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#theoretical-foundation-of-projectile-motion">Theoretical Foundation of Projectile Motion</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-deriving-the-governing-equations">Step 1: Deriving the Governing Equations</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-variety-of-solutions-based-on-initial-conditions">Step 2: Variety of Solutions Based on Initial Conditions</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#real-world-uses-of-projectile-motion">Real-World Uses of Projectile Motion</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-uneven-terrain">1. Uneven Terrain</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-air-drag">2. Air Drag</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-wind-and-variable-conditions">3. Wind and Variable Conditions</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#4-application-examples">4. Application Examples</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#5-computational-approaches">5. Computational Approaches</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#analysis-of-the-range">Analysis of the Range</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#horizontal-range-and-angle-of-projection">Horizontal Range and Angle of Projection</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#role-of-other-parameters">Role of Other Parameters</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-initial-speed-v_0">1. Initial Speed \(v_0\)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-gravitational-acceleration-g">2. Gravitational Acceleration \(g\)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#plot-showing-how-the-range-varies-with-the-angle-of-projection">Plot showing how the range varies with the angle of projection.</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#analysis-of-the-graphs">Analysis of the Graphs</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#graph-a">Graph (a)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#graph-b">Graph (b)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#why-45-results-in-maximum-range">Why 45° Results in Maximum Range</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#key-takeaways">Key Takeaways:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#practical-use">Practical Use:</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -172,6 +226,165 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h2 id="theoretical-foundation-of-projectile-motion">Theoretical Foundation of Projectile Motion</h2>
+<h3 id="step-1-deriving-the-governing-equations"><strong>Step 1: Deriving the Governing Equations</strong></h3>
+<p>Projectile motion is based on Newton’s Second Law:</p>
+<div class="arithmatex">\[
+\vec{F} = m\vec{a}
+\]</div>
+<p>In the case of a projectile undergoing freefall and assuming no air resistance, the only acting force is gravity, directed downward:</p>
+<div class="arithmatex">\[
+F_y = -mg, \quad F_x = 0
+\]</div>
+<p>This leads to the following equations of motion:</p>
+<div class="arithmatex">\[
+m \frac{d^2 x}{dt^2} = 0
+\]</div>
+<div class="arithmatex">\[
+m \frac{d^2 y}{dt^2} = -mg
+\]</div>
+<p>Dividing both sides by <span class="arithmatex">\(m\)</span> and integrating twice:</p>
+<h4 id="1-horizontal-motion"><strong>1. Horizontal Motion</strong></h4>
+<ul>
+<li><span class="arithmatex">\(\frac{d^2x}{dt^2} = 0\)</span> ⟶ First integration ⟶ <span class="arithmatex">\(\frac{dx}{dt} = v_{0x}\)</span> (a constant)</li>
+<li>Second integration ⟶ <span class="arithmatex">\(x = v_{0x} t + x_0\)</span></li>
+</ul>
+<p>Since <span class="arithmatex">\(v_{0x} = v_0 \cos\theta\)</span>, we get:</p>
+<div class="arithmatex">\[
+x = v_0 \cos\theta \cdot t
+\]</div>
+<h4 id="2-vertical-motion"><strong>2. Vertical Motion</strong></h4>
+<ul>
+<li><span class="arithmatex">\(\frac{d^2y}{dt^2} = -g\)</span> ⟶ First integration ⟶ <span class="arithmatex">\(\frac{dy}{dt} = -gt + v_{0y}\)</span></li>
+<li>Second integration ⟶ <span class="arithmatex">\(y = -\frac{1}{2}gt^2 + v_{0y} t + y_0\)</span></li>
+</ul>
+<p>Using <span class="arithmatex">\(v_{0y} = v_0 \sin\theta\)</span>, we obtain:</p>
+<div class="arithmatex">\[
+y = -\frac{1}{2}gt^2 + v_0 \sin\theta \cdot t + y_0
+\]</div>
+<h3 id="step-2-variety-of-solutions-based-on-initial-conditions"><strong>Step 2: Variety of Solutions Based on Initial Conditions</strong></h3>
+<p>Projectile motion is influenced by key initial parameters:
+- <strong>Initial speed (<span class="arithmatex">\(v_0\)</span>)</strong>: Affects the overall distance and maximum height.
+- <strong>Launch angle (<span class="arithmatex">\(\theta\)</span>)</strong>: Determines range, with a peak at <span class="arithmatex">\(\theta = 45^\circ\)</span> due to <span class="arithmatex">\(\sin 2\theta\)</span> dependence.
+- <strong>Initial height (<span class="arithmatex">\(y_0\)</span>)</strong>: Impacts the total flight time and final distance traveled.</p>
+<p>Adjusting these conditions leads to various trajectories — a reflection of how simple physics laws produce diverse outcomes.</p>
+<h2 id="real-world-uses-of-projectile-motion">Real-World Uses of Projectile Motion</h2>
+<h3 id="1-uneven-terrain">1. <strong>Uneven Terrain</strong></h3>
+<p>When launch and landing heights differ, the vertical position is:</p>
+<div class="arithmatex">\[y = y_0 + v_0 \sin\theta \cdot t - \frac{1}{2} g t^2\]</div>
+<p>To determine range, solve for <span class="arithmatex">\(t\)</span> when <span class="arithmatex">\(y = 0\)</span>, which typically involves solving a quadratic equation.</p>
+<h3 id="2-air-drag">2. <strong>Air Drag</strong></h3>
+<p>Air resistance causes deviations from ideal parabolic motion. The drag force is defined as:</p>
+<div class="arithmatex">\[\vec{F}_d = - \frac{1}{2} C_d \rho A v^2 \hat{v}\]</div>
+<p>This leads to complex, non-linear differential equations that are often handled with numerical techniques.</p>
+<h3 id="3-wind-and-variable-conditions">3. <strong>Wind and Variable Conditions</strong></h3>
+<p>Factors like wind or non-uniform gravity influence the launch parameters. For instance, wind modifies both horizontal and vertical components of motion.</p>
+<h3 id="4-application-examples">4. <strong>Application Examples</strong></h3>
+<ul>
+<li><strong>Sports</strong>: Air drag alters how balls move in soccer or basketball.</li>
+<li><strong>Military</strong>: Projectile and missile paths are calculated considering resistance and gravity.</li>
+<li><strong>Aerospace</strong>: Spaceflight must take varying gravity and drag into account.</li>
+<li><strong>Engineering</strong>: Trajectories in controlled demolitions require detailed predictions.</li>
+</ul>
+<h3 id="5-computational-approaches">5. <strong>Computational Approaches</strong></h3>
+<p>In scenarios with drag or non-constant gravity, numerical methods such as Euler’s or Runge-Kutta techniques approximate the motion effectively.</p>
+<h2 id="analysis-of-the-range">Analysis of the Range</h2>
+<h2 id="horizontal-range-and-angle-of-projection">Horizontal Range and Angle of Projection</h2>
+<p>The <em>horizontal range</em> <span class="arithmatex">\(R\)</span> is the total distance a projectile travels horizontally before returning to the original height (<span class="arithmatex">\(y = y_0\)</span>).</p>
+<p>Assuming <span class="arithmatex">\(y_0 = 0\)</span>, the total flight time <span class="arithmatex">\(T\)</span> is:</p>
+<div class="arithmatex">\[
+T = \frac{2 v_0 \sin \theta}{g}
+\]</div>
+<p>Thus, the range is:</p>
+<div class="arithmatex">\[
+R = v_0 \cos \theta \cdot T = v_0 \cos \theta \cdot \frac{2 v_0 \sin \theta}{g}
+\]</div>
+<p>Simplified:</p>
+<div class="arithmatex">\[
+R = \frac{v_0^2 \sin(2\theta)}{g}
+\]</div>
+<p>The outcome depends heavily on the launch angle:</p>
+<ul>
+<li>Maximum range occurs when <span class="arithmatex">\(\sin(2\theta) = 1\)</span>, i.e., at <span class="arithmatex">\(\theta = 45^\circ\)</span>.</li>
+<li>The function <span class="arithmatex">\(\sin(2\theta)\)</span> is symmetric around 45°, so:</li>
+<li><span class="arithmatex">\(R(30^\circ) = R(60^\circ)\)</span></li>
+<li><span class="arithmatex">\(R(10^\circ) = R(80^\circ)\)</span></li>
+</ul>
+<hr/>
+<h2 id="role-of-other-parameters">Role of Other Parameters</h2>
+<h3 id="1-initial-speed-v_0">1. Initial Speed <span class="arithmatex">\(v_0\)</span></h3>
+<p>From the range formula:</p>
+<div class="arithmatex">\[
+R = \frac{v_0^2 \sin(2\theta)}{g}
+\]</div>
+<ul>
+<li>The range increases <em>quadratically</em> with <span class="arithmatex">\(v_0\)</span>.</li>
+<li>Doubling <span class="arithmatex">\(v_0\)</span> multiplies the range by four.</li>
+<li>More speed results in longer airtime and faster movement.</li>
+</ul>
+<h3 id="2-gravitational-acceleration-g">2. Gravitational Acceleration <span class="arithmatex">\(g\)</span></h3>
+<ul>
+<li>Range is <em>inversely related</em> to <span class="arithmatex">\(g\)</span>.</li>
+<li>On the Moon (with lower <span class="arithmatex">\(g\)</span>), projectiles travel significantly farther.</li>
+<li>Example:</li>
+<li>Earth: <span class="arithmatex">\(g \approx 9.8\, \text{m/s}^2\)</span></li>
+<li>Moon: <span class="arithmatex">\(g \approx 1.6\, \text{m/s}^2 \Rightarrow R_{\text{moon}} \approx 6.1 \times R_{\text{earth}}\)</span></li>
+</ul>
+<hr/>
+<h2 id="summary">Summary</h2>
+<ul>
+<li>Range is influenced by launch angle via the <span class="arithmatex">\(\sin(2\theta)\)</span> term.</li>
+<li>It peaks at 45° and is symmetric around that angle.</li>
+<li>Greater <em>initial velocity</em> boosts the range significantly.</li>
+<li>Weaker <em>gravity</em> enables longer travel distances.</li>
+</ul>
+<p>Understanding these principles enables optimization of projectile paths — useful in fields ranging from athletics to orbital mechanics.</p>
+<h4 id="plot-showing-how-the-range-varies-with-the-angle-of-projection">Plot showing how the range varies with the angle of projection.</h4>
+<p><img alt="alt text" src="../image.png"/></p>
+<h4 id="analysis-of-the-graphs">Analysis of the Graphs</h4>
+<p><img alt="alt text" src="../image-1.png"/></p>
+<h3 id="graph-a"><strong>Graph (a)</strong></h3>
+<ul>
+<li>This graph shows trajectories for different initial speeds (30 m/s, 40 m/s, 50 m/s) at an angle of <strong>45°</strong>.</li>
+<li>Observations:</li>
+<li><strong>Greater speed yields higher peak height and longer range.</strong></li>
+</ul>
+<h3 id="graph-b"><strong>Graph (b)</strong></h3>
+<ul>
+<li>This graph presents motion for various launch angles (15°, 30°, 45°, 60°, 75°) at a fixed speed of <strong>50 m/s</strong>.</li>
+<li>Key points:</li>
+<li><strong>45° yields the greatest range</strong>.</li>
+<li>Other angles lead to shorter horizontal travel despite the same speed.</li>
+</ul>
+<hr/>
+<h2 id="why-45-results-in-maximum-range">Why 45° Results in Maximum Range</h2>
+<p>Range is determined by:</p>
+<div class="arithmatex">\[
+R = \frac{v_0^2 \sin(2\theta)}{g}
+\]</div>
+<h3 id="key-takeaways">Key Takeaways:</h3>
+<ol>
+<li><strong>Sine Function Impact</strong>:</li>
+<li>
+<p>Since <span class="arithmatex">\(\sin(2\theta)\)</span> maxes out at 1 (when <span class="arithmatex">\(2\theta = 90^\circ\)</span>), the optimal angle is <span class="arithmatex">\(\theta = 45^\circ\)</span>.</p>
+</li>
+<li>
+<p><strong>Symmetry</strong>:</p>
+</li>
+<li><span class="arithmatex">\(\sin(2\theta)\)</span> has symmetry about 45°, so:<ul>
+<li><span class="arithmatex">\(R(30^\circ) = R(60^\circ)\)</span></li>
+<li><span class="arithmatex">\(R(15^\circ) = R(75^\circ)\)</span></li>
+</ul>
+</li>
+</ol>
+<h3 id="practical-use">Practical Use:</h3>
+<p>The 45° launch angle is ideal for maximizing horizontal distance — explaining its strategic use in sports (e.g., javelin throwing) and military ballistics.</p>
+<hr/>
+<h4 id="effect-of-initial-velocity-on-range-increasing-velocity-significantly-boosts-the-range-due-to-the-square-dependence">Effect of Initial Velocity on Range: Increasing velocity significantly boosts the range due to the square dependence</h4>
+<p><img alt="alt text" src="../image-2.png"/></p>
+<h4 id="effect-of-gravity-on-range-lower-gravity-environments-enable-longer-distances-while-stronger-gravity-shortens-them">Effect of Gravity on Range: Lower gravity environments enable longer distances, while stronger gravity shortens them</h4>
+<p><img alt="alt text" src="../image-3.png"/></p>
+<p><a href="https://colab.research.google.com/drive/1meVa4feifkyxvnlKQ2V4fAX1X01SJP99?usp=sharing">My Colab</a></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
