@@ -137,4 +137,4 @@ The law remains versatile across various orbital configurations, reaffirming its
 
 Kepler's Third Law links orbital periods to the masses and distances in celestial systems. It reveals that larger central masses correspond to shorter orbital periods for the same distance. A logarithmic graph illustrates how varying the mass of the central body impacts the relationship between radius and period. This law remains a cornerstone for astronomical studies and the characterization of planetary systems.
 
-[Colab Notebook for Simulation](https://colab.research.google.com/drive/1epf4R5hQX6hPT-HhrGcgc2JgZOW6EpdO?usp=sharing)
+[My Colab ](https://colab.research.google.com/drive/1wWfcM3djZWnovcRLZF06LjGSb3W2pHjG?usp=sharing)
