@@ -50,6 +50,70 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#i-governing-differential-equation-of-a-forced-damped-pendulum">I. Governing Differential Equation of a Forced Damped Pendulum</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ii-linear-approximation-small-angle-solution">II. Linear Approximation: Small-Angle Solution</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#steady-state-particular-solution">Steady-State Particular Solution</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#iii-resonance-behavior-and-energy-aspects">III. Resonance Behavior and Energy Aspects</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#resonant-response">Resonant Response</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#energy-dynamics">Energy Dynamics</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#iv-impact-of-system-parameters">IV. Impact of System Parameters</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#damping-factor-b">Damping Factor (\(b\))</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#external-force-amplitude-a">External Force Amplitude (\(A\))</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#driving-frequency-omega">Driving Frequency (\(\omega\))</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#v-from-predictability-to-chaos">V. From Predictability to Chaos</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#phase-space-visualization">Phase Space Visualization</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#bifurcations-and-chaos-onset">Bifurcations and Chaos Onset</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#lyapunov-exponent">Lyapunov Exponent</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#vi-real-world-relevance">VI. Real-World Relevance</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#energy-scavenging-systems">Energy Scavenging Systems</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#structural-engineering">Structural Engineering</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#electrical-analogues">Electrical Analogues</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#vii-visual-analysis-of-parameter-effects">VII. Visual Analysis of Parameter Effects</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-varying-damping-coefficient">1. Varying Damping Coefficient</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-changing-driving-amplitude">2. Changing Driving Amplitude</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-adjusting-driving-frequency">3. Adjusting Driving Frequency</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#viii-visualizing-dynamics-from-order-to-chaos">VIII. Visualizing Dynamics: From Order to Chaos</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#phase-space-and-time-evolution">Phase Space and Time Evolution</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ix-comparing-pendulum-variants">IX. Comparing Pendulum Variants</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -172,7 +236,137 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
-<p>a</p>
+<h2 id="i-governing-differential-equation-of-a-forced-damped-pendulum">I. Governing Differential Equation of a Forced Damped Pendulum</h2>
+<p>The motion of a pendulum under the influence of damping and an external driving force is described by the nonlinear second-order differential equation:</p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + b \frac{d\theta}{dt} + \frac{g}{L} \sin\theta = A \cos(\omega t)
+\]</div>
+<p>Here:
+- <span class="arithmatex">\(\theta(t)\)</span> is the angular position as a function of time,
+- <span class="arithmatex">\(b\)</span> is the damping constant,
+- <span class="arithmatex">\(g\)</span> is gravitational acceleration,
+- <span class="arithmatex">\(L\)</span> is the pendulum length,
+- <span class="arithmatex">\(A\)</span> represents the amplitude of the external periodic force,
+- <span class="arithmatex">\(\omega\)</span> denotes the angular frequency of the driving force.</p>
+<p>This equation is nonlinear due to the <span class="arithmatex">\(\sin\theta\)</span> term.</p>
+<hr/>
+<h2 id="ii-linear-approximation-small-angle-solution">II. Linear Approximation: Small-Angle Solution</h2>
+<p>For small oscillations where <span class="arithmatex">\(\theta\)</span> is small (in radians), we apply the approximation:</p>
+<div class="arithmatex">\[
+\sin\theta \approx \theta
+\]</div>
+<p>This linearizes the equation:</p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + b \frac{d\theta}{dt} + \frac{g}{L} \theta = A \cos(\omega t)
+\]</div>
+<p>This is mathematically equivalent to a forced, damped harmonic oscillator:</p>
+<div class="arithmatex">\[
+\ddot{\theta} + 2\beta \dot{\theta} + \omega_0^2 \theta = A \cos(\omega t)
+\]</div>
+<p>where:
+- <span class="arithmatex">\(\omega_0 = \sqrt{\frac{g}{L}}\)</span> is the undamped natural frequency,
+- <span class="arithmatex">\(2\beta = b\)</span> denotes the damping rate.</p>
+<h3 id="steady-state-particular-solution">Steady-State Particular Solution</h3>
+<p>The long-term solution of this system is:</p>
+<div class="arithmatex">\[
+\theta_p(t) = \theta_0 \cos(\omega t - \delta)
+\]</div>
+<p>with:</p>
+<div class="arithmatex">\[
+\theta_0 = \frac{A}{\sqrt{(\omega_0^2 - \omega^2)^2 + 4\beta^2 \omega^2}}, \quad \tan\delta = \frac{2\beta \omega}{\omega_0^2 - \omega^2}
+\]</div>
+<p>This illustrates how both amplitude and phase lag are influenced by the driving frequency and damping.</p>
+<hr/>
+<h2 id="iii-resonance-behavior-and-energy-aspects">III. Resonance Behavior and Energy Aspects</h2>
+<h3 id="resonant-response">Resonant Response</h3>
+<p>Resonance manifests when the driving frequency nears the natural frequency:</p>
+<div class="arithmatex">\[
+\omega \approx \omega_0
+\]</div>
+<p>However, damping causes a shift, and the maximum amplitude is observed at:</p>
+<div class="arithmatex">\[
+\omega_{\text{res}} = \sqrt{\omega_0^2 - 2\beta^2}
+\]</div>
+<h3 id="energy-dynamics">Energy Dynamics</h3>
+<ul>
+<li>At resonance, energy input from the driver is maximally efficient.</li>
+<li>Low damping may lead to energy accumulation, possibly damaging mechanical systems.</li>
+<li>High damping reduces energy build-up, controlling oscillation amplitudes.</li>
+</ul>
+<hr/>
+<h2 id="iv-impact-of-system-parameters">IV. Impact of System Parameters</h2>
+<h3 id="damping-factor-b"><strong>Damping Factor (<span class="arithmatex">\(b\)</span>)</strong></h3>
+<ul>
+<li><strong>Large <span class="arithmatex">\(b\)</span></strong>: Overdamped; slow return to equilibrium, no oscillations.</li>
+<li><strong>Moderate <span class="arithmatex">\(b\)</span></strong>: Damped oscillations that decay gradually.</li>
+<li><strong>Small <span class="arithmatex">\(b\)</span></strong>: Persistent oscillations; greater potential for resonance or chaos.</li>
+</ul>
+<h3 id="external-force-amplitude-a"><strong>External Force Amplitude (<span class="arithmatex">\(A\)</span>)</strong></h3>
+<ul>
+<li><strong>Low values</strong>: Predictable, nearly harmonic motion.</li>
+<li><strong>Medium values</strong>: System begins to display nonlinear effects.</li>
+<li><strong>High values</strong>: Can result in chaotic motion and sensitivity to initial conditions.</li>
+</ul>
+<h3 id="driving-frequency-omega"><strong>Driving Frequency (<span class="arithmatex">\(\omega\)</span>)</strong></h3>
+<ul>
+<li><strong>Low <span class="arithmatex">\(\omega\)</span></strong>: The system closely follows the driver.</li>
+<li><strong>Near <span class="arithmatex">\(\omega_0\)</span></strong>: System exhibits peak amplitude (resonance).</li>
+<li><strong>High <span class="arithmatex">\(\omega\)</span></strong>: Oscillations become irregular or unstable.</li>
+</ul>
+<hr/>
+<h2 id="v-from-predictability-to-chaos">V. From Predictability to Chaos</h2>
+<h3 id="phase-space-visualization"><strong>Phase Space Visualization</strong></h3>
+<ul>
+<li><strong>Orderly motion</strong> → smooth loops (limit cycles).</li>
+<li><strong>Chaotic regime</strong> → irregular, non-repeating trajectories.</li>
+</ul>
+<h3 id="bifurcations-and-chaos-onset"><strong>Bifurcations and Chaos Onset</strong></h3>
+<ul>
+<li>System transitions via <strong>period doubling</strong> and <strong>bifurcations</strong> as <span class="arithmatex">\(A\)</span> increases.</li>
+<li>Eventually leads to a chaotic state characterized by unpredictable long-term behavior.</li>
+</ul>
+<h3 id="lyapunov-exponent"><strong>Lyapunov Exponent</strong></h3>
+<ul>
+<li>Positive Lyapunov exponents signify chaotic dynamics due to extreme sensitivity to initial conditions.</li>
+</ul>
+<hr/>
+<h2 id="vi-real-world-relevance">VI. Real-World Relevance</h2>
+<h3 id="energy-scavenging-systems"><strong>Energy Scavenging Systems</strong></h3>
+<ul>
+<li>Pendulum-like devices in piezoelectric setups can convert vibrations into electricity.</li>
+</ul>
+<h3 id="structural-engineering"><strong>Structural Engineering</strong></h3>
+<ul>
+<li>Structures such as bridges are analyzed using this model to prevent oscillation-induced collapses.</li>
+</ul>
+<h3 id="electrical-analogues"><strong>Electrical Analogues</strong></h3>
+<ul>
+<li>The damped driven pendulum has direct parallels in RLC electrical circuits used in communications and signal processing.</li>
+</ul>
+<hr/>
+<h2 id="vii-visual-analysis-of-parameter-effects">VII. Visual Analysis of Parameter Effects</h2>
+<h3 id="1-varying-damping-coefficient">1. Varying Damping Coefficient</h3>
+<p><img alt="alt text" src="../image-4.png"/></p>
+<p>As damping increases, the pendulum's amplitude diminishes and oscillations decay faster.</p>
+<h3 id="2-changing-driving-amplitude">2. Changing Driving Amplitude</h3>
+<p><img alt="alt text" src="../image-5.png"/></p>
+<p>Larger <span class="arithmatex">\(A\)</span> values amplify motion and introduce nonlinear effects.</p>
+<h3 id="3-adjusting-driving-frequency">3. Adjusting Driving Frequency</h3>
+<p><img alt="alt text" src="../image-6.png"/></p>
+<p>At resonance, oscillations peak; at high frequencies, they become erratic.</p>
+<hr/>
+<h2 id="viii-visualizing-dynamics-from-order-to-chaos">VIII. Visualizing Dynamics: From Order to Chaos</h2>
+<h3 id="phase-space-and-time-evolution">Phase Space and Time Evolution</h3>
+<p><img alt="alt text" src="../image-7.png"/></p>
+<ul>
+<li><strong>Phase Space</strong>: Ordered motion → regular loops; chaotic → scattered structures.</li>
+</ul>
+<p><img alt="![alt text](image-9.png)" src="../image-8.png"/>
+- <strong>Time Series</strong>: Predictable sinusoid in regular motion vs irregular fluctuations in chaos.</p>
+<h2 id="ix-comparing-pendulum-variants">IX. Comparing Pendulum Variants</h2>
+<p>A comparison of simple, damped, and driven pendulums using time evolution and phase portraits:</p>
+<p><img alt="alt text" src="../image-10.png"/></p>
+<p><a href="https://colab.research.google.com/drive/1n0DdQICtk8b00k0kCQ4dHr1McScM5Ezg?usp=sharing">My Colab</a></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
