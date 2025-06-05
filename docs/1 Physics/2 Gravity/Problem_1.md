@@ -133,6 +133,67 @@ The law remains versatile across various orbital configurations, reaffirming its
 
 ![alt text](image.png)
 
+# 🔭 Using Kepler’s Third Law to Estimate Masses
+
+Kepler’s Third Law (in Newtonian form):
+
+$$
+T^2 = \frac{4\pi^2 r^3}{G M}
+\quad \Rightarrow \quad
+M = \frac{4\pi^2 r^3}{G T^2}
+$$
+
+Where:
+- $T$ is the orbital period (in seconds)
+- $r$ is the orbital radius (in meters)
+- $G = 6.67430 \times 10^{-11} \, \text{m}^3/\text{kg}/\text{s}^2$
+
+---
+
+## Mass of the Sun (Using Earth's Orbit)
+
+- Orbital radius of Earth:  
+  $$
+  r = 1 \, \text{AU} = 1.496 \times 10^{11} \, \text{m}
+  $$
+- Orbital period of Earth:  
+  $$
+  T = 365.25 \times 24 \times 3600 = 3.156 \times 10^7 \, \text{s}
+  $$
+
+**Plug into formula:**
+$$
+M_{\text{sun}} = \frac{4\pi^2 (1.496 \times 10^{11})^3}{6.67430 \times 10^{-11} \times (3.156 \times 10^7)^2}
+\approx 1.989 \times 10^{30} \, \text{kg}
+$$
+
+**Mass of the Sun ≈ $1.989 \times 10^{30}$ kg**
+
+---
+
+## Mass of the Earth (Using Moon’s Orbit)
+
+- Orbital radius of Moon:  
+  $$
+  r = 3.844 \times 10^8 \, \text{m}
+  $$
+- Orbital period of Moon:  
+  $$
+  T = 27.32 \times 24 \times 3600 = 2.36 \times 10^6 \, \text{s}
+  $$
+
+**Plug into formula:**
+$$
+M_{\text{earth}} = \frac{4\pi^2 (3.844 \times 10^8)^3}{6.67430 \times 10^{-11} \times (2.36 \times 10^6)^2}
+\approx 5.97 \times 10^{24} \, \text{kg}
+$$
+ **Mass of the Earth ≈ $5.97 \times 10^{24}$ kg**
+
+---
+
+These values closely match accepted astronomical constants, verifying Kepler's Third Law.
+
+
 ## General Observations
 
 Kepler's Third Law links orbital periods to the masses and distances in celestial systems. It reveals that larger central masses correspond to shorter orbital periods for the same distance. A logarithmic graph illustrates how varying the mass of the central body impacts the relationship between radius and period. This law remains a cornerstone for astronomical studies and the characterization of planetary systems.
