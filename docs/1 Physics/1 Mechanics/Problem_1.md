@@ -170,7 +170,7 @@ Understanding these principles enables optimization of projectile paths — usef
 
 ---
 
-## Why 45° Results in Maximum Range
+## 45° Results in Maximum Range
 
 Range is determined by:
 
