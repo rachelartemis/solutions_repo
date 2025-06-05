@@ -155,7 +155,13 @@ At resonance, oscillations peak; at high frequencies, they become erratic.
 
 ---
 
-## VIII. Visualizing Dynamics: From Order to Chaos
+## VIII. Comparing Pendulum Variants
+
+A comparison of simple, damped, and driven pendulums using time evolution and phase portraits:
+
+![alt text](image-10.png)
+
+## IX. Visualizing Dynamics: From Order to Chaos
 
 ### Phase Space and Time Evolution
 
@@ -166,12 +172,6 @@ At resonance, oscillations peak; at high frequencies, they become erratic.
 ![![alt text](image-9.png)](image-8.png)
 - **Time Series**: Predictable sinusoid in regular motion vs irregular fluctuations in chaos.
 
-
-## IX. Comparing Pendulum Variants
-
-A comparison of simple, damped, and driven pendulums using time evolution and phase portraits:
-
-![alt text](image-10.png)
 
 
 [My Colab](https://colab.research.google.com/drive/1n0DdQICtk8b00k0kCQ4dHr1McScM5Ezg?usp=sharing)
