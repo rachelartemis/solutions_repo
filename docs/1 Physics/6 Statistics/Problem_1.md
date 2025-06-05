@@ -64,4 +64,4 @@ In each of these areas, the CLT provides a mathematical basis for making conclus
 
 ---
 
-[Google Colab](https://colab.research.google.com/drive/1OYUPMbmXrXpP1u9pxJ4wsWCXWQaEdV2P?usp=sharing)
+[Google Colab](https://colab.research.google.com/drive/1-NU0PiKVWl9kbaGDnE_cP3eupJia5fQu?usp=sharing)
