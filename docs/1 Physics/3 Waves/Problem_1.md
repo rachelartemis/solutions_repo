@@ -93,6 +93,11 @@ The resulting pattern can be visualized using a 2D color map of $\eta_{\text{sum
 - Frequency $f = 1$
 - Phase $\phi = 0$
 - Square side length $L = 4$
+
+## 3d Visualization
+
+![alt text](interference_4_sources_slower-1.gif)
+
 ## Conclusion
 
 By placing wave sources at the corners of a square and applying the principle of superposition, we can visualize intricate interference patterns. This exercise provides insight into the behavior of waves and how geometry influences interference on a water surface.
