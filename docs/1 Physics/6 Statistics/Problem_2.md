@@ -234,4 +234,4 @@ $$
 
 This technique is a profound example of geometric probability and an alternate Monte Carlo approach to π approximation.
 
-[Google Colab]https://colab.research.google.com/drive/1WMf30zKV3_y9dT4nBBhb_v9ZlXLugmco?usp=sharing)
+[Google Colab](https://colab.research.google.com/drive/1WMf30zKV3_y9dT4nBBhb_v9ZlXLugmco?usp=sharing)
